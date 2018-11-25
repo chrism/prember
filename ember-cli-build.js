@@ -13,6 +13,11 @@ module.exports = function(defaults) {
     prember: {
       enabled: true,
       urls
+    },
+
+    fingerprint: {
+      enabled: true,
+      generateAssetMap: true
     }
   });
 

@@ -1,0 +1,7 @@
+<div class="message">
+  <ul>
+    {{#each-in model.assets as |asset fingerprinted|}}
+      <li>{{asset}} {{fingerprinted}}</li>
+    {{/each-in}}
+  </ul>
+</div>

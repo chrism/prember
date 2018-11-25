@@ -1,8 +1,14 @@
 const jsdom = require("jsdom");
+const fs = require("fs");
 const { JSDOM } = jsdom;
 
 module.exports = async function({ distDir, visit }) {
   let urls = ['/', '/redirects', '/use-static-asset'];
+
+  let staticAssetExists = fs.existsSync(distDir + '/static.json');
+  let assetMapExists = fs.existsSync(distDir + '/assets/assetMap.json');
+  console.log('static file?', staticAssetExists);
+  console.log('asset map?', assetMapExists);
 
   // Here we exercise the ability to make requests against the
   // fastboot app in order to discover more urls
